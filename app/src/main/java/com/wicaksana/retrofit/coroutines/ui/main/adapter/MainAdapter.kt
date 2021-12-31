@@ -6,23 +6,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.wicaksana.retrofit.coroutines.R
-import com.wicaksana.retrofit.coroutines.data.model.User
+import com.wicaksana.retrofit.coroutines.data.model.Post
 import com.wicaksana.retrofit.coroutines.ui.main.adapter.MainAdapter.DataViewHolder
 import kotlinx.android.synthetic.main.item_layout.view.imageViewAvatar
-import kotlinx.android.synthetic.main.item_layout.view.textViewUserEmail
+import kotlinx.android.synthetic.main.item_layout.view.textViewUserBody
 import kotlinx.android.synthetic.main.item_layout.view.textViewUserName
 
-class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<DataViewHolder>() {
+class MainAdapter(private val posts: ArrayList<Post>) : RecyclerView.Adapter<DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(user: User) {
+        fun bind(post: Post) {
             itemView.apply {
-                textViewUserName.text = user.name
-                textViewUserEmail.text = user.email
-                Glide.with(imageViewAvatar.context)
-                    .load(user.avatar)
-                    .into(imageViewAvatar)
+                textViewUserName.text = post.title
+                textViewUserBody.text = post.body
             }
         }
     }
@@ -30,16 +27,16 @@ class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<Dat
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder =
         DataViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false))
 
-    override fun getItemCount(): Int = users.size
+    override fun getItemCount(): Int = posts.size
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        holder.bind(users[position])
+        holder.bind(posts[position])
     }
 
-    fun addUsers(users: List<User>) {
-        this.users.apply {
+    fun addPosts(posts: List<Post>) {
+        this.posts.apply {
             clear()
-            addAll(users)
+            addAll(posts)
         }
 
     }

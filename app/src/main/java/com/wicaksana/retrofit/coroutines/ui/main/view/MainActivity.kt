@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.wicaksana.retrofit.coroutines.R.*
 import com.wicaksana.retrofit.coroutines.data.api.ApiHelper
 import com.wicaksana.retrofit.coroutines.data.api.RetrofitBuilder
-import com.wicaksana.retrofit.coroutines.data.model.User
+import com.wicaksana.retrofit.coroutines.data.model.Post
 import com.wicaksana.retrofit.coroutines.ui.base.ViewModelFactory
 import com.wicaksana.retrofit.coroutines.ui.main.adapter.MainAdapter
 import com.wicaksana.retrofit.coroutines.ui.main.viewmodel.MainViewModel
@@ -77,9 +77,9 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun retrieveList(users: List<User>) {
+    private fun retrieveList(posts: List<Post>) {
         adapter.apply {
-            addUsers(users)
+            addPosts(posts)
             notifyDataSetChanged()
         }
     }
