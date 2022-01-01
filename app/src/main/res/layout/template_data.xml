@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginBottom="15dp"
+    android:clickable="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symbol"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PER"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/eps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EPS"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/roa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROA"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/roe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROE"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/der"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DER"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/pbv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PBV"
+            android:textSize="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginVertical="5dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DY"
+            android:textSize="15dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
